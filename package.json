@@ -1,0 +1,36 @@
+{
+  "name": "express-apiproxy",
+  "version": "1.0.0",
+  "description": "A module to make a bridge between user's request and backend HTTP API server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/perfectworks/node-apiproxy.git"
+  },
+  "keywords": [
+    "api",
+    "proxy",
+    "http",
+    "express",
+    "request",
+    "cookie"
+  ],
+  "author": "perfectworks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/perfectworks/node-apiproxy/issues"
+  },
+  "devDependencies": {
+    "chai": "~1.8.1",
+    "mocha": "~1.14.0",
+    "express": "~3.4.4"
+  },
+  "dependencies": {
+    "request": "~2.27.0",
+    "dev-ip": "~0.1.6",
+    "underscore": "~1.5.2"
+  }
+}
