@@ -12,16 +12,16 @@ A module to make a bridge between user's request and backend HTTP API server. It
     // ... whip up an express app
 
     app.get('/', function (req, res) {
-        // apiproxy will proxy cookie in `req` to target api address, and write cookie to `res` something returned
-        apiproxy.proxy(req, res)
-            .to('http://a/b/c.json', function (error, response, body) {
+        // apiproxy will proxy cookie in `req` to target api address
+        var request = apiproxy.proxy(req);
 
+        request('http://a/b/c.json', function (error, response, body) {
             // mikeal/request style response callback
         });
     });
 ```
 
-The `to` method is same to [request], it means you can use [streaming] or [options] like [request], it's very simple.
+The `apiproxy` proxy will return a [request] object, it means you can use [streaming] or [options] like [request], it's very simple.
 
 ## License
 
