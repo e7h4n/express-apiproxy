@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "request": "~2.27.0",
-    "dev-ip": "~0.1.6"
+    "dev-ip": "~0.1.6",
+    "underscore": "~1.5.2"
   }
 }
