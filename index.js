@@ -14,12 +14,12 @@ var apiproxy = function (req, options) {
         localIp = require('dev-ip').getIp();
     }
 
-    var forwarded = (ips || []).concat([localIp]).join(', ');
+    var forwarded = (ips || []).concat([localIp]).join(',');
 
     options = _.defaults({
         headers: {
-            cookie: req.header('cookie'),
-            'x-forwarded-for': forwarded
+            Cookie: req.header('cookie'),
+            'X-Forwarded-For': forwarded
         }
     }, options);
 
