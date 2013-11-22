@@ -11,7 +11,7 @@ var apiproxy = function (req, options) {
     var ips = req.ips;
     var localIp = req.connection.remoteAddress || req.socket.remoteAddress;
 
-    var forwarded = (ips || []).concat([localIp]).join(',');
+    var forwarded = (ips || []).concat([localIp])[0] || '';
 
     options = _.defaults({
         headers: {
