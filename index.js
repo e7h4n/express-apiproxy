@@ -2,7 +2,6 @@
 
 var _ = require('underscore');
 var request = require('request');
-var localIp = null;
 
 var apiproxy = function (req, options) {
     if (!req || !req.header) {
@@ -10,9 +9,7 @@ var apiproxy = function (req, options) {
     }
 
     var ips = req.ips;
-    if (localIp === null) {
-        localIp = require('dev-ip').getIp();
-    }
+    var localIp = req.connection.remoteAddress || req.socket.remoteAddress;
 
     var forwarded = (ips || []).concat([localIp]).join(',');
 

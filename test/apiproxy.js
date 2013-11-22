@@ -13,7 +13,10 @@ var fakeRequest = {
             cookie: 'abc=123'
         }[field];
     },
-    ip: '202.120.2.101',
+    connection: {
+        remoteAddress: '127.0.0.1'
+    },
+    ip: '127.0.0.1',
     ips: ['202.120.2.101', '192.168.0.1', '192.168.0.7']
 };
 
