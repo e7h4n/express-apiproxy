@@ -1,6 +1,6 @@
 {
   "name": "express-apiproxy",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "A module to make a bridge between user's request and backend HTTP API server.",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,7 @@
     "express": "~3.4.4"
   },
   "dependencies": {
+    "ipaddr.js": "^1.1.0",
     "request": "^2.58.0",
     "underscore": "~1.5.2"
   }

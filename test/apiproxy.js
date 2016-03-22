@@ -14,7 +14,7 @@ var fakeRequest = {
         }[field];
     },
     connection: {
-        remoteAddress: '127.0.0.1'
+        remoteAddress: '::ffff:127.0.0.1'
     },
     ip: '127.0.0.1',
     ips: ['202.120.2.101', '192.168.0.1', '192.168.0.7']
